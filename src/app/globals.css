@@ -10,7 +10,7 @@
   --acme-border-color: #949ca3;
 }
 
-[data-theme="dark"] {
+/* [data-theme="dark"] {
   --acme-background-color: #3f2475;
   --acme-foreground-color: red;
   --acme-primary-color: red;
@@ -18,7 +18,7 @@
   --acme-accent-color: red;
   --acme-secondary-accent-color: red;
   --acme-border-color: red;
-}
+} */
 
 @theme {
   --breakpoint-*: initial;
