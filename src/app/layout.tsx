@@ -11,7 +11,9 @@ export default function RootLayout({
   return (
     <html data-theme="light" lang="fa" className={Vazir.className} suppressHydrationWarning>
       <body>
-        <Providers>{children}</Providers>
+        {/* <Providers>
+          </Providers> */}
+          {children}
       </body>
     </html>
   );
