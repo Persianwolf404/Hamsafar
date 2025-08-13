@@ -35,7 +35,7 @@ export default function Hero() {
         <h1
           className={`${Yekan.className} text-5xl text-secondary-accent font-extrabold leading-[65px] mb-2`}
         >
-          با <span className="text-secondary relative">همسفر</span> راحت
+          با <span className="text-secondary relative">،همسفر</span> راحت
           سوار تاکسی شو اسکن کن و سریع کرایه رو <br />
           <span className="text-transparent bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text">
             آنلاین پرداخت کن!
