@@ -9,7 +9,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="fa" className={Vazir.className} suppressHydrationWarning>
+    <html data-theme="light" lang="fa" className={Vazir.className} suppressHydrationWarning>
       <body>
         <Providers>{children}</Providers>
       </body>
