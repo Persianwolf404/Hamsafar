@@ -8,15 +8,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html
-      data-theme="light"
-      lang="fa"
-      className={Vazir.className}
-      suppressHydrationWarning
-    >
+    <html lang="fa" className={Vazir.className} suppressHydrationWarning>
       <body>
-        {/* <Providers>{children}</Providers> */}
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

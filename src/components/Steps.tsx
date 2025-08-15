@@ -35,11 +35,22 @@ export default function Steps() {
     );
   }, []);
 
+  const features = [
+    "پرداخت سریع و آنی",
+    "تجربه مدرن و راحت در سفر شهری",
+    "کاملاً روی بستر وب و بدون نصب اپلیکیشن",
+    "امن و مطمئن با درگاه پرداخت شاپرک",
+    "24 ساعته در دسترس",
+  ];
+
   return (
-    <div dir="rtl" className={`flex h-screen ${responsiveClasses}`}>
-      <div dir="rtl" className="w-1/2 flex flex-col justify-center pr-4">
+    <div dir="rtl" className={`flex py-20 md:py-10  ${responsiveClasses}`}>
+      <div
+        dir="rtl"
+        className="md:w-full w-1/2 flex flex-col justify-center pr-4"
+      >
         <h1
-          className={`${Yekan.className} text-5xl text-secondary-accent font-extrabold leading-[65px] mb-2`}
+          className={`${Yekan.className} text-5xl sm:text-5xl lg:text-4xl md:text-6xl text-secondary-accent font-extrabold leading-[65px] mb-2`}
         >
           چرا از{" "}
           <span dir="ltr" className="text-secondary relative">
@@ -49,40 +60,16 @@ export default function Steps() {
           <br />
         </h1>
         <div className="mt-8 flex gap-5 mr-1 flex-col">
-          <div className="flex gap-4">
-            <span className="w-1 bg-primary rounded-4xl"></span>
-            <h4 className="text-accent my-2 text-xl">
-              پرداخت سریع و آنی 
-            </h4>
-          </div>
-          <div className="flex gap-4">
-            <span className="w-1 bg-primary rounded-4xl"></span>
-            <h4 className="text-accent my-2 text-xl">
-              تجربه مدرن و راحت در سفر شهری{" "}
-            </h4>
-          </div>
-          <div className="flex gap-4">
-            <span className="w-1 bg-primary rounded-4xl"></span>
-            <h4 className="text-accent my-2 text-xl">
-              کاملاً روی بستر وب و بدون نصب اپلیکیشن
-            </h4>
-          </div>
-          <div className="flex gap-4">
-            <span className="w-1 bg-primary rounded-4xl"></span>
-            <h4 className="text-accent my-2 text-xl">
-              امن و مطمئن با درگاه پرداخت شاپرک
-            </h4>
-          </div>
-          <div className="flex gap-4">
-            <span className="w-1 bg-primary rounded-4xl"></span>
-            <h4 className="text-accent my-2 text-xl">
-                24 ساعته در دسترس
-            </h4>
-          </div>
+          {features.map((feature, index) => (
+            <div key={index} className="flex gap-4">
+              <span className="w-1 bg-primary rounded-4xl"></span>
+              <h4 className="text-accent my-2 text-xl">{feature}</h4>
+            </div>
+          ))}
         </div>
-        <div className="mt-10">
+        <div className="mt-10 md:hidden">
           <a
-            className="inline-block py-2 px-4 text-white bg-secondary rounded-xl"
+            className="inline-block py-2 px-4 text-tertiary-accent bg-secondary rounded-xl"
             href="#"
           >
             <div className="flex items-center gap-8 hover:gap-10 transition-all">
@@ -94,7 +81,7 @@ export default function Steps() {
           </a>
         </div>
       </div>
-      <div className="flex w-2/4 items-center">
+      <div className="flex w-2/4 items-center md:hidden">
         <div>
           <Image
             ref={imgRef}

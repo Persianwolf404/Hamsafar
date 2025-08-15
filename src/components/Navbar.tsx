@@ -62,7 +62,7 @@ export default function Navbar() {
   return (
     <header
       dir="rtl"
-      className="fixed top-0 left-0 w-full z-50  bg-white/16 backdrop-blur-2xl shadow-lg border-b border-white/20  transition-all duration-300"
+      className="fixed top-0 left-0 w-full z-50  bg-background/16 backdrop-blur-2xl shadow-lg border-b border-background/20  transition-all duration-300"
     >
       <div
         ref={navRef}
@@ -84,13 +84,10 @@ export default function Navbar() {
               />
               <span className="relative text-primary font-extrabold text-lg tracking-tight cursor-pointer">
                 Hamsafar
-                {/* Gradient underline on hover - grows from right to left */}
                 <span className="absolute -bottom-1 right-0 w-0 h-[3px] bg-gradient-to-l from-primary to-secondary rounded-full transition-all duration-300 group-hover:w-full"></span>
               </span>
             </div>
           </div>
-
-          {/* Navigation */}
           <nav>
             <ul
               ref={linksRef}
@@ -101,31 +98,24 @@ export default function Navbar() {
                   key={item.id}
                   onClick={() => handleScroll(item.id)}
                   className="relative cursor-pointer hover:text-primary transition-colors duration-300 border-gray-300 border-r-2 py-1 pr-4 first:border-0 group"
-                  style={{ paddingRight: "1rem" }} // spacing for underline alignment
+                  style={{ paddingRight: "1rem" }} 
                 >
                   {item.label}
-                  {/* underline grows from right to left */}
                   <span className="absolute bottom-0 right-0 w-0 h-[2px] bg-gradient-to-l from-primary to-secondary transition-all duration-300 group-hover:w-full"></span>
                 </li>
               ))}
             </ul>
           </nav>
-
-          {/* CTA Button - no animation, just static */}
           <div
             ref={btnRef}
-            className="flex transition-colors hover:bg-secondary items-center gap-2 cursor-pointer bg-primary text-white py-2 px-5 rounded-xl font-semibold shadow-md"
+            className="flex transition-colors hover:bg-secondary items-center gap-2 cursor-pointer bg-primary text-tertiary-accent py-2 px-5 rounded-xl font-semibold shadow-md"
           >
             ورود / ثبت نام
           </div>
         </div>
       </div>
 
-      <style jsx global>{`
-        html {
-          scroll-behavior: smooth;
-        }
-      `}</style>
+ 
     </header>
   );
 }

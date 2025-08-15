@@ -1,24 +1,27 @@
 @import "tailwindcss";
 
 :root {
-  --acme-background-color: #f4f4f4;
+  --acme-background-color: #ffffff;
   --acme-foreground-color: #f2f2f2;
   --acme-primary-color: #6928f5;
   --acme-secondary-color: #7e67ba;
-  --acme-accent-color: #4e4e4e;
+  --acme-tertiary-color: #d1d5db;
+  --acme-accent-color: #4b5563;
   --acme-secondary-accent-color: #3d2871;
-  --acme-border-color: #949ca3;
+  --acme-tertiary-accent-color: #eeeeee;
 }
 
-/* [data-theme="dark"] {
-  --acme-background-color: #3f2475;
-  --acme-foreground-color: red;
-  --acme-primary-color: red;
-  --acme-secondary-color: red;
-  --acme-accent-color: red;
-  --acme-secondary-accent-color: red;
-  --acme-border-color: red;
-} */
+[data-theme="dark"] {
+  --acme-background-color: #19122d;
+  --acme-foreground-color: #1f1635;
+  --acme-primary-color: #9b6dfd;
+  --acme-secondary-color: #977ee2;
+  --acme-tertiary-color: transparent;
+  --acme-accent-color: #c9c9c9;
+  --acme-secondary-accent-color: #c5b7ea;
+  --acme-tertiary-accent-color: #e3d8fd;
+  --acme-border-color: #2f2650;
+}
 
 @theme {
   --breakpoint-*: initial;
@@ -28,7 +31,9 @@
   --color-secondary: var(--acme-secondary-color);
   --color-accent: var(--acme-accent-color);
   --color-secondary-accent: var(--acme-secondary-accent-color);
+  --color-tertiary-accent: var(--acme-tertiary-accent-color);
   --color-border: var(--acme-border-olor);
+  --color-tertiary: var(--acme-tertiary-color);
 }
 
 @custom-variant xl (@media (max-width: 1440px));
@@ -38,3 +43,6 @@
 @custom-variant xs (@media (max-width: 576px));
 @custom-variant 2xs (@media (max-width: 360px));
 
+html {
+  scroll-behavior: smooth;
+}
